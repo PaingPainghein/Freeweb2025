@@ -35,12 +35,29 @@
     <p>Http injector Free key 👇</p>
     
      
-        <p <!-- The text field -->
+        
 Test first 
+                        ​
 <input type="text" value="vless://451d5651-36b7-4bf2-a4fe-4ac4291651fc@help.viu.com:80?path=%2Fray&security=none&encryption=none&type=ws#proxy" id="myInput">
-
-<!-- The button used to copy the text -->
-<button onclick="myFunction()">Copy text</button></p>
+<button onclick="myFunction()">Copy text</button>
+​
+<script>
+function myFunction() {
+  // Get the text field
+  var copyText = document.getElementById("myInput");
+​
+  // Select the text field
+  copyText.select();
+  copyText.setSelectionRange(0, 99999); // For mobile devices
+​
+  // Copy the text inside the text field
+  navigator.clipboard.writeText(copyText.value);
+  
+  // Alert the copied text
+  alert("Copied the text: " + copyText.value);
+}
+</script>
+​
                     </div>
                 </div>
             </div>
